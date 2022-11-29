@@ -12,6 +12,11 @@
         game.load.image('steve', './asset/collectable/steve-head.png');
         game.load.image('grace', './asset/collectable/grace-head.png');
         game.load.image('kennedi', './asset/collectable/kennedi-head.png');
+        game.load.image('boba', './asset/collectable/boba.png');
+        game.load.image('ramune', './asset/collectable/ramune.png');
+        game.load.image('macron', './asset/collectable/macron.png');
+        game.load.image('icecream', './asset/collectable/icecream.png');
+        game.load.image('cat', './asset/collectable/cat.png');
         game.load.image('max', './asset/collectable/max-head.png');
         game.load.atlas('halle', './asset/halle/phaser-json-array/halle.png', './asset/halle/phaser-json-array/halle.json');
     };
