@@ -60,7 +60,7 @@ var background = function(window) {
             var building, buildingHeight;
             for (var i = 0; i < canvasWidth / 200; ++i) {
                 buildingHeight = Math.random() * 50 + 250;
-                building = draw.rect(75, buildingHeight, 'LightGray', 'Black', 1);
+                building = draw.rect(75, buildingHeight, 'pink', 'lightblue', 1);
                 building.x = 200 * i;
                 building.y = groundY - buildingHeight;
                 background.addChild(building);
@@ -68,32 +68,33 @@ var background = function(window) {
             }
 
             // TODO 4: Part 1 - Add a tree
-            lamp = draw.bitmap('img/street-light.png');
-            background.addChild(lamp);
-            lamp.x = 400;
-            lamp.y = groundY - 200;
-        }
+           // TODO 4: Part 1 - Add a tree
+           lamp = draw.bitmap('img/street-light.png');
+           background.addChild(lamp);
+           lamp.x = 400;
+           lamp.y = groundY - 200;
+       }
 
-        // Perform background animation
-        // called on each timer "tick" - 60 times per second
-        function update() {
-            // useful variables
-            var canvasWidth = app.canvas.width;
-            var canvasHeight = app.canvas.height;
-            var groundY = ground.y;
+       // Perform background animation
+       // called on each timer "tick" - 60 times per second
+       function update() {
+           // useful variables
+           var canvasWidth = app.canvas.width;
+           var canvasHeight = app.canvas.height;
+           var groundY = ground.y;
 
-            // TODO 4: Part 2 - Move the tree!
-            lamp.x -= 1;
-            if (lamp.x < -200) {
-                lamp.x = canvasWidth;
-            }
-            for (var i = 0; i < buildings.length; i++) {
-                buildings[i].x -= 0.5;
-                if (buildings[i].x < -200) {
-                    buildings[i].x = canvasWidth;
-                }
-            }
-
+           // TODO 4: Part 2 - Move the tree!
+           lamp.x -= 1;
+           if (lamp.x < -200) {
+               lamp.x = canvasWidth;
+           }
+           for (var i = 0; i < buildings.length; i++) {
+               buildings[i].x -= 0.5;
+               if (buildings[i].x < -200) {
+                   buildings[i].x = canvasWidth;
+               }
+           }
+           
             // TODO 5: Part 2 - Parallax
 
 
