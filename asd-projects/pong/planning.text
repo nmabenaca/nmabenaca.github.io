@@ -1,0 +1,29 @@
+User Story / Gameplay
+
+Describe the gameplay
+    -The object of the game is to try to have the other player miss the ball from their platform, like a tennis match.
+What are the conditions when the game begins?
+    -There are two players and each ones selects their side. 
+Does the game have an end? If so, what are the conditions for when it ends?
+    -The game does have an end . The conditions for when it ends will be if the platform misses the ball, the other player will get a point. 
+What ifs will there be?
+    -The ifs will be , if the platform misses the ball, the ball respawns back in the middle, if the platform misses the ball, the other player earns a point. 
+
+Visual Game Components:
+What are the visual game components? For example, in Bouncing Box, the game components were the board and the box.
+    -platform and ball
+Which will be static? (the board)
+    -the platform
+Which will be animated? (the box)
+    -the ball
+What data will you need to manage each game component? For example, in Bouncing Box, the data values were positionX, speedX, and points.
+    -positionX, speedX, borderX, borderY
+
+Events / Logic
+
+What events will occur in this game? (timer events, keyboard events, clicking events?)
+    -clicking events for both players
+How do those events affect the data of the program?
+    -It adds on more code to the program
+For each "event", write out the high-level logic of what will happen. It is better (and tricky) to be as specific as you can while remaining high-level!
+    -When you press down on the r key, the game will restart with the ball in the middle. If you hold down the key, you can move the platform up and down. When you release the key you are no longer in control of the platform. 
