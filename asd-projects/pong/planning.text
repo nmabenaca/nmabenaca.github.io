@@ -5,25 +5,25 @@ Describe the gameplay
 What are the conditions when the game begins?
     -There are two players and each ones selects their side. 
 Does the game have an end? If so, what are the conditions for when it ends?
-    -The game does have an end . The conditions for when it ends will be if the platform misses the ball, the other player will get a point. 
+    -The game does have an end. The game ends when a player reaches the max of 5 points. So the condition will be if the points are x = 5 the game will end. 
 What ifs will there be?
-    -The ifs will be , if the platform misses the ball, the ball respawns back in the middle, if the platform misses the ball, the other player earns a point. 
+    - if the ball hits the wall, the other player will recieve a point, if the platform attepts to exceed the border, it will stop, if the ball hits the top of the border, it will reset, if the ball hits the bottom of the border, the ball will reset. if the ball tries to exceed the border, it will reset. if a player reaches max amount of 5 point, the game will end. 
 
 Visual Game Components:
 What are the visual game components? For example, in Bouncing Box, the game components were the board and the box.
     -platform and ball
 Which will be static? (the board)
-    -the platform
+    -the border
 Which will be animated? (the box)
-    -the ball
+    -the ball, the platform
 What data will you need to manage each game component? For example, in Bouncing Box, the data values were positionX, speedX, and points.
-    -positionX, speedX, borderX, borderY
+    -Position of the ball at the start, position of the paddles at the start, timer, score keeper, border position, speed of platform, speed of ball
 
 Events / Logic
 
 What events will occur in this game? (timer events, keyboard events, clicking events?)
-    -clicking events for both players
+    -the time limit is 3:00 minutes, if you press down on the r key the game will reset, if you press the up arrow key the right platform will move up, if you press the down arrow key the right platform will move down, if you press the w key the left platform will move up, if you press the s key the left platform will move down
 How do those events affect the data of the program?
-    -It adds on more code to the program
+    -These event will make the data of the program more complex and longer, but it will also help organize it. 
 For each "event", write out the high-level logic of what will happen. It is better (and tricky) to be as specific as you can while remaining high-level!
-    -When you press down on the r key, the game will restart with the ball in the middle. If you hold down the key, you can move the platform up and down. When you release the key you are no longer in control of the platform. 
+    -When you press down on the r key, the game will restart with the ball in the middle. If you hold the down and up key, you can move the platform up and down. When you release the key you are no longer in control of the platform. 
