@@ -29,31 +29,61 @@ async function bubbleSort(array){
   
 
 // TODO 3: Implement quickSort
-function quickSort(array, left, right){
-    if(left < right){
-      const index = partition(array, left, right);
-    if(left < index - 1){
+async function quickSort(array, left, right) {
+  if (right - left > 0) {
+    var index = partition(array, left, right);
+    if (left < index - 1) {
       quickSort(array, left, index - 1);
     }
-    if(index < right){ 
+    if (index < right) {
       quickSort(array, index, right);
     }
-    }
-  }  
+  }
+}
 
 // TODOs 4 & 5: Implement partition
-function partition(array, left, right){
-    const pivot = array[right];
-    let i = left - 1;
-    for(let j = left; j < right; j++){
-      if(array[j] <= pivot){
-        i++;
-        swap(array, i, j);
-      }
+async function partition(array, left, right, pivotIndex) {
+  const pivotValue = array[pivotIndex];
+  let partitionIndex = left;
+
+  // Swap the pivot to the end
+  swap(array, pivotIndex, right);
+  updateCounter(quickCounter);
+
+  for (let i = left; i < right; i++) {
+    if (array[i].value < pivotValue) {
+      swap(array, i, partitionIndex);
+      updateCounter(quickCounter);
+      partitionIndex++;
     }
-    swap(array, i + 1, right);
-    return i + 1;
-  }  
+  }
+
+  // Swap pivot to final position
+  swap(array, partitionIndex, right);
+  updateCounter(quickCounter);
+
+  //TODO: Fill in the code block for the while loop
+  while (left < right) {
+    // First inner while loop
+    while (array[left].value < pivotValue) {
+      left++;
+    }
+
+    // Second inner while loop
+    while (array[right].value > pivotValue) {
+      right--;
+    }
+
+    // Swap when ready
+    if (left < right) {
+      swap(array, left, right);
+      updateCounter(quickCounter);
+      await sleep();
+    }
+  }
+
+  return partitionIndex;
+}
 
 // TODO 1: Implement swap
 function swap(array, i, j){
